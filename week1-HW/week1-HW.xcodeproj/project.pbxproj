@@ -16,6 +16,8 @@
 		196C664C270ACC2E008A976B /* week1_HWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C664B270ACC2E008A976B /* week1_HWTests.swift */; };
 		196C6656270ACC2E008A976B /* week1_HWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6655270ACC2E008A976B /* week1_HWUITests.swift */; };
 		196C6658270ACC2E008A976B /* week1_HWUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6657270ACC2E008A976B /* week1_HWUITestsLaunchTests.swift */; };
+		197DB82D270AEFC10014A430 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197DB82C270AEFC10014A430 /* SignUpViewController.swift */; };
+		197DB82F270AEFD20014A430 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197DB82E270AEFD20014A430 /* ConfirmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		196C6651270ACC2E008A976B /* week1-HWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "week1-HWUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		196C6655270ACC2E008A976B /* week1_HWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week1_HWUITests.swift; sourceTree = "<group>"; };
 		196C6657270ACC2E008A976B /* week1_HWUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = week1_HWUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		197DB82C270AEFC10014A430 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		197DB82E270AEFD20014A430 /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				196C6636270ACC2C008A976B /* SceneDelegate.swift */,
 				196C6638270ACC2C008A976B /* ViewController.swift */,
 				196C663A270ACC2C008A976B /* Main.storyboard */,
+				197DB82C270AEFC10014A430 /* SignUpViewController.swift */,
+				197DB82E270AEFD20014A430 /* ConfirmViewController.swift */,
 				196C663D270ACC2E008A976B /* Assets.xcassets */,
 				196C663F270ACC2E008A976B /* LaunchScreen.storyboard */,
 				196C6642270ACC2E008A976B /* Info.plist */,
@@ -258,8 +264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197DB82F270AEFD20014A430 /* ConfirmViewController.swift in Sources */,
 				196C6639270ACC2C008A976B /* ViewController.swift in Sources */,
 				196C6635270ACC2C008A976B /* AppDelegate.swift in Sources */,
+				197DB82D270AEFC10014A430 /* SignUpViewController.swift in Sources */,
 				196C6637270ACC2C008A976B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
