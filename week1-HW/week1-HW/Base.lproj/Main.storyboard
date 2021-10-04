@@ -59,16 +59,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as6-Ca-rZO">
                                 <rect key="frame" x="87" y="532" width="85" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="85" id="Rf2-OS-IuV"/>
-                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="계정만들기"/>
                                 <connections>
                                     <segue destination="JMS-Kk-ZC5" kind="show" id="Ngj-zu-CWL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-5b-RCq">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-5b-RCq">
                                 <rect key="frame" x="252" y="532" width="75" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="arr-qb-EiL"/>
@@ -106,6 +103,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="azP-Vl-TDL"/>
+                    <connections>
+                        <outlet property="emailOrPhoneNumberField" destination="MhT-AZ-sNg" id="PNP-Kg-lZx"/>
+                        <outlet property="nameField" destination="Tdh-c1-MQv" id="EjX-EE-Qjw"/>
+                        <outlet property="nextButton" destination="3vH-5b-RCq" id="hnG-Gz-I9e"/>
+                        <outlet property="passwordField" destination="8VG-O2-AfB" id="p3l-Tf-8y8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,7 +117,7 @@
         <!--Confirm View Controller-->
         <scene sceneID="1gf-wG-rsh">
             <objects>
-                <viewController id="mpT-5V-QSp" customClass="ConfirmViewController" customModule="week1_HW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="confirmViewController" id="mpT-5V-QSp" customClass="ConfirmViewController" customModule="week1_HW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NjT-mu-njr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,6 +135,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wq-8i-hgd">
                                 <rect key="frame" x="87" y="440" width="240" height="31"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <connections>
+                                    <action selector="touchNextButton:" destination="mpT-5V-QSp" eventType="touchUpInside" id="msX-ub-T9i"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-f0-Wp7">
                                 <rect key="frame" x="131" y="332" width="152" height="30"/>
@@ -166,6 +172,9 @@
                             <constraint firstItem="0wq-8i-hgd" firstAttribute="top" secondItem="Y4Z-R1-FHd" secondAttribute="bottom" constant="40" id="vR1-Mi-IOJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="aJL-f0-Wp7" id="mxV-kq-wdn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1R-0r-qGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -210,22 +219,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj4-ya-G2L">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj4-ya-G2L">
                                 <rect key="frame" x="87" y="481" width="240" height="31"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <connections>
+                                    <action selector="touchNextButton:" destination="JMS-Kk-ZC5" eventType="touchUpInside" id="XIY-yS-bN5"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE9-av-1Ho">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DE9-av-1Ho">
                                 <rect key="frame" x="77" y="424" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4Eb-TF-f9S"/>
                                     <constraint firstAttribute="width" constant="30" id="oMt-R0-mec"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="secondaryLabelColor"/>
-                                <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="square" catalog="system"/>
+                                <connections>
+                                    <action selector="touchRawPasswordPresent:" destination="JMS-Kk-ZC5" eventType="touchUpInside" id="iph-vJ-nzm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 표시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGj-EF-nI4">
-                                <rect key="frame" x="109" y="428" width="93" height="22"/>
+                                <rect key="frame" x="109" y="428" width="76.5" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -234,7 +248,6 @@
                         <viewLayoutGuide key="safeArea" id="QAk-PN-DWa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QAk-PN-DWa" firstAttribute="trailing" secondItem="YGj-EF-nI4" secondAttribute="trailing" constant="212" id="2GC-f6-8wt"/>
                             <constraint firstItem="DE9-av-1Ho" firstAttribute="top" secondItem="Iwp-N7-2qw" secondAttribute="bottom" constant="20" id="2lH-ue-kfJ"/>
                             <constraint firstItem="Pj4-ya-G2L" firstAttribute="top" secondItem="YGj-EF-nI4" secondAttribute="bottom" constant="31" id="3Ej-Gx-qFp"/>
                             <constraint firstItem="Iwp-N7-2qw" firstAttribute="leading" secondItem="QAk-PN-DWa" secondAttribute="leading" constant="87" id="6Hr-9R-MuB"/>
@@ -259,6 +272,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="31o-ki-trX"/>
+                    <connections>
+                        <outlet property="emailOrPhoneNumberField" destination="C4Q-7R-frP" id="z7Y-qh-ihV"/>
+                        <outlet property="nameField" destination="Ydz-3J-pbC" id="b1J-iC-jlQ"/>
+                        <outlet property="nextButton" destination="Pj4-ya-G2L" id="Y7E-a0-7uS"/>
+                        <outlet property="passwordField" destination="Iwp-N7-2qw" id="7Q7-X1-eli"/>
+                        <outlet property="rawPasswordPresentToggle" destination="DE9-av-1Ho" id="2DL-aq-P6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJf-yu-C35" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
