@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBAction func unwindToMain(_ unwindSegue: UIStoryboardSegue) {
+    }
+    
     @objc func checkFieldForNextButton(_ sender: UITextField) {
         if nameField.text != ""
             && emailOrPhoneNumberField.text != ""

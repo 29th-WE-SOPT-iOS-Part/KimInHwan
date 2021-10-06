@@ -12,9 +12,9 @@ class ConfirmViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     var nameToSet: String?
     
-    @IBAction func touchNextButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
+//    @IBAction func touchNextButton(_ sender: UIButton) {
+//        self.dismiss(animated: true, completion: nil)
+//    }
     
     func setNameLabelText() {
         if let nameToSet = nameToSet {

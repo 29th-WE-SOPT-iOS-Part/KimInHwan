@@ -136,7 +136,7 @@
                                 <rect key="frame" x="87" y="440" width="240" height="31"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
-                                    <action selector="touchNextButton:" destination="mpT-5V-QSp" eventType="touchUpInside" id="msX-ub-T9i"/>
+                                    <segue destination="SVj-ka-pXb" kind="unwind" identifier="unwindSegueToMain" unwindAction="unwindToMain:" id="xav-MZ-dQC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-f0-Wp7">
@@ -177,6 +177,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1R-0r-qGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SVj-ka-pXb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1889.8550724637682" y="559.82142857142856"/>
         </scene>
