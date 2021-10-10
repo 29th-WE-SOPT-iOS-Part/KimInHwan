@@ -15,6 +15,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var rawPasswordPresentToggle: UIButton!
     
     @IBOutlet weak var nextButton: UIButton!
+    
     @IBAction func touchRawPasswordPresent(_ sender: UIButton) {
         passwordField.isSecureTextEntry = !passwordField.isSecureTextEntry
         sender.isSelected = !sender.isSelected
@@ -30,9 +31,9 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func checkFieldForNextButton(_ sender: UITextField) {
-        if nameField.text != ""
-            && emailOrPhoneNumberField.text != ""
-            && passwordField.text != "" {
+        if nameField.hasText
+            && emailOrPhoneNumberField.hasText
+            && passwordField.hasText {
             nextButton.isEnabled = true
         } else {
             nextButton.isEnabled = false

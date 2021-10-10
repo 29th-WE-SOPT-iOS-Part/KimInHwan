@@ -18,9 +18,9 @@ class ViewController: UIViewController {
     }
     
     @objc func checkFieldForNextButton(_ sender: UITextField) {
-        if nameField.text != ""
-            && emailOrPhoneNumberField.text != ""
-            && passwordField.text != "" {
+        if nameField.hasText
+            && emailOrPhoneNumberField.hasText
+            && passwordField.hasText {
             nextButton.isEnabled = true
         } else {
             nextButton.isEnabled = false
