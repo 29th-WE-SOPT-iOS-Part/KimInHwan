@@ -42,19 +42,10 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
         emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
         rawPasswordPresentToggle.setImage(UIImage(systemName: "checkmark.square"), for: .selected)
         rawPasswordPresentToggle.setImage(UIImage(systemName: "square"), for: .normal)
     }
-    
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-
 }

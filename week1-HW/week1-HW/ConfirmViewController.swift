@@ -12,10 +12,6 @@ class ConfirmViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     var nameToSet: String?
     
-//    @IBAction func touchNextButton(_ sender: UIButton) {
-//        self.dismiss(animated: true, completion: nil)
-//    }
-    
     func setNameLabelText() {
         if let nameToSet = nameToSet {
             nameLabel.text = "\(nameToSet)님"
@@ -28,16 +24,5 @@ class ConfirmViewController: UIViewController {
         // Do any additional setup after loading the view.
         setNameLabelText()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
