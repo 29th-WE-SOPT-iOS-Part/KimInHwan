@@ -17,6 +17,17 @@ class ViewController: UIViewController {
     @IBAction func unwindToMain(_ unwindSegue: UIStoryboardSegue) {
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addTargetFields()
+    }
+    
+    func addTargetFields() {
+        nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+        emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+        passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+    }
+    
     @objc func checkFieldForNextButton(_ sender: UITextField) {
         if nameField.hasText
             && emailOrPhoneNumberField.hasText
@@ -25,14 +36,6 @@ class ViewController: UIViewController {
         } else {
             nextButton.isEnabled = false
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
     }
     
     // MARK: - Navigation

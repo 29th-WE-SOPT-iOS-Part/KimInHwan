@@ -12,17 +12,17 @@ class ConfirmViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     var nameToSet: String?
     
-    func setNameLabelText() {
-        if let nameToSet = nameToSet {
-            nameLabel.text = "\(nameToSet)님"
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setNameLabelText()
+    }
+    
+    func setNameLabelText() {
+        if let nameToSet = nameToSet {
+            nameLabel.text = "\(nameToSet)님"
+        }
     }
 
 }

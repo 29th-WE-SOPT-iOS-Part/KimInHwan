@@ -30,6 +30,23 @@ class SignUpViewController: UIViewController {
         self.present(confirmVC, animated: true, completion: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addTargetFields()
+        setPasswordToggleImage()
+    }
+    
+    func addTargetFields() {
+        nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+        emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+        passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+    }
+    
+    func setPasswordToggleImage() {
+        rawPasswordPresentToggle.setImage(UIImage(systemName: "checkmark.square"), for: .selected)
+        rawPasswordPresentToggle.setImage(UIImage(systemName: "square"), for: .normal)
+    }
+    
     @objc func checkFieldForNextButton(_ sender: UITextField) {
         if nameField.hasText
             && emailOrPhoneNumberField.hasText
@@ -38,14 +55,5 @@ class SignUpViewController: UIViewController {
         } else {
             nextButton.isEnabled = false
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        rawPasswordPresentToggle.setImage(UIImage(systemName: "checkmark.square"), for: .selected)
-        rawPasswordPresentToggle.setImage(UIImage(systemName: "square"), for: .normal)
     }
 }
