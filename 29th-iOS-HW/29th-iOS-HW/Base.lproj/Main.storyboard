@@ -130,7 +130,7 @@
                                 <rect key="frame" x="22" y="486" width="331" height="31"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
-                                    <segue destination="SVj-ka-pXb" kind="unwind" identifier="unwindSegueToMain" unwindAction="unwindToMain:" id="xav-MZ-dQC"/>
+                                    <action selector="touchNextButton:" destination="mpT-5V-QSp" eventType="touchUpInside" id="EuF-TG-DkO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label님 환영합니다!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-f0-Wp7">
@@ -150,16 +150,32 @@
                                     <constraint firstAttribute="width" constant="118" id="xop-CL-E9P"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DV0-X3-SNw">
+                                <rect key="frame" x="112" y="540" width="151" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="7oz-AW-DT6"/>
+                                    <constraint firstAttribute="height" constant="22" id="WWx-x0-I1E"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="SVj-ka-pXb" kind="unwind" unwindAction="unwindToMain:" id="q0L-Lu-W7O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QCw-ZR-QP4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vml-xQ-beJ" firstAttribute="centerX" secondItem="QCw-ZR-QP4" secondAttribute="centerX" id="4wo-sH-pxh"/>
                             <constraint firstItem="vml-xQ-beJ" firstAttribute="top" secondItem="QCw-ZR-QP4" secondAttribute="top" constant="248" id="6yE-RG-ibS"/>
+                            <constraint firstItem="DV0-X3-SNw" firstAttribute="top" secondItem="0wq-8i-hgd" secondAttribute="bottom" constant="23" id="AVD-he-qDa"/>
                             <constraint firstItem="aJL-f0-Wp7" firstAttribute="centerX" secondItem="QCw-ZR-QP4" secondAttribute="centerX" id="PjJ-aH-fCC"/>
                             <constraint firstItem="0wq-8i-hgd" firstAttribute="top" secondItem="aJL-f0-Wp7" secondAttribute="bottom" constant="53" id="do2-ky-ale"/>
                             <constraint firstItem="aJL-f0-Wp7" firstAttribute="top" secondItem="vml-xQ-beJ" secondAttribute="bottom" constant="23" id="hLr-bI-tkt"/>
                             <constraint firstItem="QCw-ZR-QP4" firstAttribute="trailing" secondItem="0wq-8i-hgd" secondAttribute="trailing" constant="22" id="m0Q-P9-0Hw"/>
+                            <constraint firstItem="DV0-X3-SNw" firstAttribute="centerX" secondItem="QCw-ZR-QP4" secondAttribute="centerX" id="tLE-aN-5aT"/>
                             <constraint firstItem="0wq-8i-hgd" firstAttribute="leading" secondItem="QCw-ZR-QP4" secondAttribute="leading" constant="22" id="uLw-8D-PBv"/>
                         </constraints>
                     </view>
