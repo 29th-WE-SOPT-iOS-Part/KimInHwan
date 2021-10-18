@@ -198,7 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="f9T-3g-kIJ"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="추가" selectedImage="plueCircleIcon" id="6Bf-9t-L2n"/>
+                    <tabBarItem key="tabBarItem" title="추가" image="plueCircleIcon" selectedImage="plueCircleIcon" id="6Bf-9t-L2n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubr-e4-YTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,7 +214,7 @@
                         <viewLayoutGuide key="safeArea" id="6iE-HK-IvR"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Short" selectedImage="shortIcon" id="Xg4-dF-iS0"/>
+                    <tabBarItem key="tabBarItem" title="Short" image="shortIcon" selectedImage="shortIcon" id="Xg4-dF-iS0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tp8-PW-Ym1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,7 +230,7 @@
                         <viewLayoutGuide key="safeArea" id="fHQ-ge-X30"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="구독" selectedImage="subscriptionsIconFill" id="jkh-40-5af"/>
+                    <tabBarItem key="tabBarItem" title="구독" image="subscriptionsIcon" selectedImage="subscriptionsIconFill" id="jkh-40-5af"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjj-xq-R5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,7 +246,7 @@
                         <viewLayoutGuide key="safeArea" id="bh3-cH-OyY"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="보관함" selectedImage="LibraryIconFill" id="iyW-1a-eFh"/>
+                    <tabBarItem key="tabBarItem" title="보관함" image="LibraryIcon" selectedImage="LibraryIconFill" id="iyW-1a-eFh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptn-Hc-CLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,7 +262,7 @@
                         <viewLayoutGuide key="safeArea" id="CiI-Ky-Xlz"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" selectedImage="homeIcon" id="IyY-0W-yYb"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="homeIconFill" selectedImage="homeIcon" id="IyY-0W-yYb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jo1-08-TIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,12 +418,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LibraryIcon" width="28.333333969116211" height="28.333333969116211"/>
         <image name="LibraryIconFill" width="28.333333969116211" height="28.333333969116211"/>
         <image name="homeIcon" width="28.333333969116211" height="28.333333969116211"/>
+        <image name="homeIconFill" width="28.333333969116211" height="28.333333969116211"/>
         <image name="logo" width="118" height="40"/>
         <image name="plueCircleIcon" width="28.333333969116211" height="28.333333969116211"/>
         <image name="shortIcon" width="28.333333969116211" height="28.333333969116211"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="subscriptionsIcon" width="28.333333969116211" height="28.333333969116211"/>
         <image name="subscriptionsIconFill" width="28" height="28.333333969116211"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
