@@ -188,7 +188,23 @@
             </objects>
             <point key="canvasLocation" x="1889.8550724637682" y="559.82142857142856"/>
         </scene>
-        <!--Item 2-->
+        <!--추가-->
+        <scene sceneID="2iT-m1-ICR">
+            <objects>
+                <viewController id="fRt-U3-k6C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p74-4d-ehk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="f9T-3g-kIJ"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="추가" selectedImage="plueCircleIcon" id="6Bf-9t-L2n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ubr-e4-YTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3908" y="962"/>
+        </scene>
+        <!--Short-->
         <scene sceneID="BQk-rt-vyh">
             <objects>
                 <viewController id="Woj-df-UGT" sceneMemberID="viewController">
@@ -196,15 +212,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6iE-HK-IvR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Xg4-dF-iS0"/>
+                    <tabBarItem key="tabBarItem" title="Short" selectedImage="shortIcon" id="Xg4-dF-iS0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tp8-PW-Ym1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3908" y="862"/>
+            <point key="canvasLocation" x="3908" y="285"/>
         </scene>
-        <!--Item 1-->
+        <!--구독-->
+        <scene sceneID="6qp-Y5-eTu">
+            <objects>
+                <viewController id="GPJ-7o-Xxb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TrG-6i-caX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fHQ-ge-X30"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="구독" selectedImage="subscriptionsIconFill" id="jkh-40-5af"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qjj-xq-R5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3908" y="1647"/>
+        </scene>
+        <!--보관함-->
+        <scene sceneID="JdD-he-Sk0">
+            <objects>
+                <viewController id="0VT-yA-PdK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BJE-TN-Tg2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bh3-cH-OyY"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="보관함" selectedImage="LibraryIconFill" id="iyW-1a-eFh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ptn-Hc-CLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3908" y="2320"/>
+        </scene>
+        <!--홈-->
         <scene sceneID="83b-ba-Gzj">
             <objects>
                 <viewController id="haQ-La-oNm" sceneMemberID="viewController">
@@ -212,13 +260,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CiI-Ky-Xlz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="IyY-0W-yYb"/>
+                    <tabBarItem key="tabBarItem" title="홈" selectedImage="homeIcon" id="IyY-0W-yYb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jo1-08-TIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3908" y="256"/>
+            <point key="canvasLocation" x="3908" y="-400"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mso-zw-MP7">
@@ -228,10 +276,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="haQ-La-oNm" kind="relationship" relationship="viewControllers" id="Zd5-XY-1NO"/>
                         <segue destination="Woj-df-UGT" kind="relationship" relationship="viewControllers" id="FD0-tU-hkP"/>
+                        <segue destination="fRt-U3-k6C" kind="relationship" relationship="viewControllers" id="cmU-iw-ktz"/>
+                        <segue destination="GPJ-7o-Xxb" kind="relationship" relationship="viewControllers" id="rEE-cQ-9pP"/>
+                        <segue destination="0VT-yA-PdK" kind="relationship" relationship="viewControllers" id="8oj-qp-wSR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGE-ig-uuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -366,13 +418,33 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LibraryIconFill" width="28.333333969116211" height="28.333333969116211"/>
+        <image name="homeIcon" width="28.333333969116211" height="28.333333969116211"/>
         <image name="logo" width="118" height="40"/>
+        <image name="plueCircleIcon" width="28.333333969116211" height="28.333333969116211"/>
+        <image name="shortIcon" width="28.333333969116211" height="28.333333969116211"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="subscriptionsIconFill" width="28" height="28.333333969116211"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
