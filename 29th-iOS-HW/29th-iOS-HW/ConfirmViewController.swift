@@ -25,8 +25,4 @@ class ConfirmViewController: UIViewController {
         }
     }
     
-    @IBAction func touchNextButton(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
 }

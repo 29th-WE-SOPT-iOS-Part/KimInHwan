@@ -130,7 +130,7 @@
                                 <rect key="frame" x="22" y="486" width="331" height="31"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
-                                    <action selector="touchNextButton:" destination="mpT-5V-QSp" eventType="touchUpInside" id="EuF-TG-DkO"/>
+                                    <segue destination="QlR-Mb-MXW" kind="presentation" modalPresentationStyle="fullScreen" id="WIh-UG-DIb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label님 환영합니다!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJL-f0-Wp7">
@@ -187,6 +187,56 @@
                 <exit id="SVj-ka-pXb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1889.8550724637682" y="559.82142857142856"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="BQk-rt-vyh">
+            <objects>
+                <viewController id="Woj-df-UGT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XNz-ve-wBG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6iE-HK-IvR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Xg4-dF-iS0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tp8-PW-Ym1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3908" y="862"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="83b-ba-Gzj">
+            <objects>
+                <viewController id="haQ-La-oNm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hWS-vs-xuz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CiI-Ky-Xlz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="IyY-0W-yYb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jo1-08-TIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3908" y="256"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mso-zw-MP7">
+            <objects>
+                <tabBarController id="QlR-Mb-MXW" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0vC-qL-ygT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="haQ-La-oNm" kind="relationship" relationship="viewControllers" id="Zd5-XY-1NO"/>
+                        <segue destination="Woj-df-UGT" kind="relationship" relationship="viewControllers" id="FD0-tU-hkP"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zGE-ig-uuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2988" y="558"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="tjz-Km-SMd">
