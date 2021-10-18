@@ -21,7 +21,7 @@ class ConfirmViewController: UIViewController {
     
     func setNameLabelText() {
         if let nameToSet = nameToSet {
-            nameLabel.text = "\(nameToSet)님"
+            nameLabel.text = "\(nameToSet)님 환영합니다!"
         }
     }
 
