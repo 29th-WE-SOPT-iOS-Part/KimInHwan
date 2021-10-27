@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct ShortsIconData {
     let userList: [String] = [
@@ -15,5 +16,14 @@ struct ShortsIconData {
         "WebPart",
         "DesignPart",
         "PlanPart"
+    ]
+    
+    let userIconList: [UIImage?] = [
+        UIImage(named: "1daon"),
+        UIImage(named: "2daon"),
+        UIImage(named: "3daon"),
+        UIImage(named: "4daon"),
+        UIImage(named: "5daon"),
+        UIImage(named: "6daon")
     ]
 }
