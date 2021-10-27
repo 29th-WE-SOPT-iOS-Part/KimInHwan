@@ -28,12 +28,13 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func touchNextButton(_ sender: UIButton) {
-        guard let confirmVC: ConfirmViewController = self.storyboard?.instantiateViewController(withIdentifier: "confirmViewController") as? ConfirmViewController else { return }
+        let confirmStoryBoard = UIStoryboard(name: "Confirm", bundle: nil)
+        guard let confirmViewController = confirmStoryBoard.instantiateViewController(withIdentifier: "confirmViewController") as? ConfirmViewController else { return }
         
-        confirmVC.nameToSet = nameField.text
+        confirmViewController.nameToSet = nameField.text
         
-        confirmVC.modalPresentationStyle = .fullScreen
-        self.present(confirmVC, animated: true, completion: nil)
+        confirmViewController.modalPresentationStyle = .fullScreen
+        present(confirmViewController, animated: true, completion: nil)
     }
     
     func addTargetFields() {
