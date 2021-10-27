@@ -22,6 +22,7 @@ class HomeTabViewController: UIViewController {
     }
     
     func setShortsCollectionView() {
+        shortsCollectionView.delegate = self
         shortsCollectionView.dataSource = self
         shortsCollectionView.register(UINib(nibName: "ShortsCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: ShortsCollectionViewCell.identifier)
     }
@@ -40,9 +41,16 @@ extension HomeTabViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell: ShortsCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortsCollectionViewCell.identifier, for: indexPath) as? ShortsCollectionViewCell else { return UICollectionViewCell() }
         
+        cell.shortsThumbnailImage.image = shortsDatas.userIconList[indexPath.item]
         cell.nameLabel.text = shortsDatas.userList[indexPath.item]
         
         return cell
+    }
+}
+
+extension HomeTabViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 72, height: 104)
     }
 }
 

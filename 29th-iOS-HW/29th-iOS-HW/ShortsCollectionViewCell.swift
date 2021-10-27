@@ -16,11 +16,11 @@ class ShortsCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        layoutShortsThumbnailImage()
     }
     
     func layoutShortsThumbnailImage() {
-        shortsThumbnailImage.layer.cornerRadius = CGFloat(90)
+        shortsThumbnailImage.layer.cornerRadius = CGFloat(10)
         shortsThumbnailImage.layer.masksToBounds = true
     }
 
