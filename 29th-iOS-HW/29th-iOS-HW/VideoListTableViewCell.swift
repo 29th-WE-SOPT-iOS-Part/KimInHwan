@@ -8,16 +8,16 @@
 import UIKit
 
 class VideoListTableViewCell: UITableViewCell {
+    
+    static let identifier: String = "VideoListTableViewCell"
 
+    @IBOutlet weak var thumbnailImage: UIImageView!
+    @IBOutlet weak var userProfileImage: UIImageView!
+    @IBOutlet weak var videoTitleLabel: UILabel!
+    @IBOutlet weak var metadataLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

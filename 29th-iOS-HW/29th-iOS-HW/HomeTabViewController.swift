@@ -41,10 +41,16 @@ extension HomeTabViewController: UICollectionViewDataSource {
 
 extension HomeTabViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell: VideoListTableViewCell = tableView.dequeueReusableCell(withIdentifier: VideoListTableViewCell.identifier, for: indexPath.row) as? VideoListTableViewCell else { return UITableViewCell() }
+        
+        switch indexPath.row {
+            case 
+        }
+        
+        return cell
     }
 }

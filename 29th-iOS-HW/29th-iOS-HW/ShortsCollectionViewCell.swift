@@ -8,6 +8,8 @@
 import UIKit
 
 class ShortsCollectionViewCell: UICollectionViewCell {
+    
+    static let identifier: String = "ShortsCollectionViewCell"
 
     @IBOutlet weak var shortsThumbnailImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
