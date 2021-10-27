@@ -18,14 +18,17 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ya-iY-w1B">
-                        <rect key="frame" x="7" y="15" width="58" height="58"/>
+                        <rect key="frame" x="7" y="14" width="58" height="58"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="58" id="VZq-In-Q4i"/>
                             <constraint firstAttribute="height" constant="58" id="ght-u9-uNM"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D40-le-6iv">
-                        <rect key="frame" x="7" y="75" width="58" height="15"/>
+                        <rect key="frame" x="7" y="74" width="58" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="mKb-7m-9rM"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" systemColor="secondaryLabelColor"/>
                         <nil key="highlightedColor"/>
@@ -35,11 +38,10 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="D40-le-6iv" firstAttribute="top" secondItem="9ya-iY-w1B" secondAttribute="bottom" constant="2" id="EPR-hL-fKJ"/>
-                <constraint firstItem="D40-le-6iv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7" id="MH3-o4-YRl"/>
-                <constraint firstItem="9ya-iY-w1B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="15" id="OTF-ZM-08K"/>
-                <constraint firstAttribute="trailing" secondItem="D40-le-6iv" secondAttribute="trailing" constant="7" id="jnY-gf-Ydn"/>
+                <constraint firstItem="9ya-iY-w1B" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="OTF-ZM-08K"/>
                 <constraint firstAttribute="bottom" secondItem="D40-le-6iv" secondAttribute="bottom" constant="14" id="keC-bW-djb"/>
                 <constraint firstItem="9ya-iY-w1B" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="stX-p8-UOz"/>
+                <constraint firstItem="D40-le-6iv" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="yDd-XX-el6"/>
             </constraints>
             <connections>
                 <outlet property="nameLabel" destination="D40-le-6iv" id="Aci-qI-1Sq"/>
