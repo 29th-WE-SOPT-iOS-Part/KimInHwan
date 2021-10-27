@@ -9,13 +9,15 @@ import UIKit
 
 class HomeTabViewController: UIViewController {
 
+    @IBOutlet weak var shortsCollectionView: UICollectionView!
+    @IBOutlet weak var videoListTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -25,5 +27,24 @@ class HomeTabViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension HomeTabViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+}
+
+extension HomeTabViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
 }

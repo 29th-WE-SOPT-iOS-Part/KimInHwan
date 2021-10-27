@@ -1,28 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--Confirm View Controller-->
+        <scene sceneID="LYP-nB-aLi">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController storyboardIdentifier="confirmViewController" id="8Ae-P0-FUT" customClass="ConfirmViewController" customModule="_9th_iOS_HW" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mIz-HQ-3Pl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgS-9V-dch">
+                                <rect key="frame" x="22" y="486" width="370" height="31"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다음"/>
+                                <connections>
+                                    <action selector="touchNextButton:" destination="8Ae-P0-FUT" eventType="touchUpInside" id="cJQ-Ix-kE4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label님 환영합니다!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvr-8u-Rvn">
+                                <rect key="frame" x="143" y="355" width="128" height="78"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="78" id="V18-dz-VFw"/>
+                                    <constraint firstAttribute="width" constant="128" id="ev9-9F-pdC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="WXY-bi-IP7">
+                                <rect key="frame" x="148" y="292" width="118" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="oDk-l0-Bjw"/>
+                                    <constraint firstAttribute="height" constant="40" id="u0g-fS-4dP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-tD-I5r">
+                                <rect key="frame" x="131.5" y="540" width="151" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="UwZ-4J-HvM"/>
+                                    <constraint firstAttribute="height" constant="22" id="rls-NP-WZF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다른 계정으로 로그인하기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="kaF-eH-l8y" kind="unwind" unwindAction="unwindToSignIn:" id="9FK-TP-ge6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EBj-LK-xHf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="deJ-tD-I5r" firstAttribute="centerX" secondItem="EBj-LK-xHf" secondAttribute="centerX" id="0rw-Fv-cxW"/>
+                            <constraint firstItem="Hvr-8u-Rvn" firstAttribute="centerX" secondItem="EBj-LK-xHf" secondAttribute="centerX" id="5hq-ir-UQV"/>
+                            <constraint firstItem="EBj-LK-xHf" firstAttribute="trailing" secondItem="qgS-9V-dch" secondAttribute="trailing" constant="22" id="94P-fc-OgP"/>
+                            <constraint firstItem="qgS-9V-dch" firstAttribute="top" secondItem="Hvr-8u-Rvn" secondAttribute="bottom" constant="53" id="Gxj-CD-FEQ"/>
+                            <constraint firstItem="qgS-9V-dch" firstAttribute="leading" secondItem="EBj-LK-xHf" secondAttribute="leading" constant="22" id="Lhw-zY-YMe"/>
+                            <constraint firstItem="WXY-bi-IP7" firstAttribute="top" secondItem="EBj-LK-xHf" secondAttribute="top" constant="248" id="NeW-5U-Chp"/>
+                            <constraint firstItem="deJ-tD-I5r" firstAttribute="top" secondItem="qgS-9V-dch" secondAttribute="bottom" constant="23" id="WgH-sd-Q6d"/>
+                            <constraint firstItem="WXY-bi-IP7" firstAttribute="centerX" secondItem="EBj-LK-xHf" secondAttribute="centerX" id="Zy1-n4-2DA"/>
+                            <constraint firstItem="Hvr-8u-Rvn" firstAttribute="top" secondItem="WXY-bi-IP7" secondAttribute="bottom" constant="23" id="lxi-hQ-UVC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Hvr-8u-Rvn" id="bqi-Ps-HUu"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iBu-hZ-J0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kaF-eH-l8y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="1889.8550724637682" y="559.82142857142856"/>
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="118" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

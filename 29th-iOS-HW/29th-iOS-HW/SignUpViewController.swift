@@ -16,6 +16,12 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addTargetFields()
+        setPasswordToggleImage()
+    }
+    
     @IBAction func touchRawPasswordPresent(_ sender: UIButton) {
         passwordField.isSecureTextEntry = !passwordField.isSecureTextEntry
         sender.isSelected = !sender.isSelected
@@ -28,12 +34,6 @@ class SignUpViewController: UIViewController {
         
         confirmVC.modalPresentationStyle = .fullScreen
         self.present(confirmVC, animated: true, completion: nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addTargetFields()
-        setPasswordToggleImage()
     }
     
     func addTargetFields() {
