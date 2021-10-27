@@ -37,6 +37,16 @@ class SignUpViewController: UIViewController {
         present(confirmViewController, animated: true, completion: nil)
     }
     
+    @objc func checkFieldForNextButton(_ sender: UITextField) {
+        if nameField.hasText
+            && emailOrPhoneNumberField.hasText
+            && passwordField.hasText {
+            nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
+        }
+    }
+    
     func addTargetFields() {
         nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
         emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
@@ -46,15 +56,5 @@ class SignUpViewController: UIViewController {
     func setPasswordToggleImage() {
         rawPasswordPresentToggle.setImage(UIImage(systemName: "checkmark.square"), for: .selected)
         rawPasswordPresentToggle.setImage(UIImage(systemName: "square"), for: .normal)
-    }
-    
-    @objc func checkFieldForNextButton(_ sender: UITextField) {
-        if nameField.hasText
-            && emailOrPhoneNumberField.hasText
-            && passwordField.hasText {
-            nextButton.isEnabled = true
-        } else {
-            nextButton.isEnabled = false
-        }
     }
 }

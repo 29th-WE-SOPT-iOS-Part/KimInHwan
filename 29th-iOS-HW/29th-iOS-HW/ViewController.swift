@@ -51,12 +51,4 @@ class ViewController: UIViewController {
         emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
     }
-    
-//    // MARK: - Navigation
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let confirmVC: ConfirmViewController = segue.destination as? ConfirmViewController else { return }
-//
-//        confirmVC.nameToSet = nameField.text
-//    }
 }
