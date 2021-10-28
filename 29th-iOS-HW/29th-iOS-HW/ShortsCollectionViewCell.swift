@@ -20,7 +20,7 @@ class ShortsCollectionViewCell: UICollectionViewCell {
     }
     
     func layoutShortsThumbnailImage() {
-        shortsThumbnailImage.layer.cornerRadius = CGFloat(10)
+        shortsThumbnailImage.layer.cornerRadius = CGFloat(27.5)
         shortsThumbnailImage.layer.masksToBounds = true
     }
 

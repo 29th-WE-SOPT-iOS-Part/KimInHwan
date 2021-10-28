@@ -10,14 +10,17 @@ import UIKit
 class HomeTabViewController: UIViewController {
 
     @IBOutlet weak var shortsCollectionView: UICollectionView!
+    @IBOutlet weak var recommendCollectionView: UICollectionView!
     @IBOutlet weak var videoListTableView: UITableView!
     
     let videoDatas: VideoListData = VideoListData()
     let shortsDatas: ShortsIconData = ShortsIconData()
+    let recommendDatas: RecommendData = RecommendData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setShortsCollectionView()
+        setRecommendCollectionView()
         setVideoListTableView()
     }
     
@@ -25,6 +28,12 @@ class HomeTabViewController: UIViewController {
         shortsCollectionView.delegate = self
         shortsCollectionView.dataSource = self
         shortsCollectionView.register(UINib(nibName: "ShortsCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: ShortsCollectionViewCell.identifier)
+    }
+    
+    func setRecommendCollectionView() {
+        recommendCollectionView.delegate = self
+        recommendCollectionView.dataSource = self
+        recommendCollectionView.register(UINib(nibName: "RecommendCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: RecommendCollectionViewCell.identifier)
     }
     
     func setVideoListTableView() {
@@ -35,22 +44,66 @@ class HomeTabViewController: UIViewController {
 
 extension HomeTabViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return shortsDatas.userList.count
+        switch collectionView {
+        case shortsCollectionView:
+            return shortsDatas.userList.count
+        case recommendCollectionView:
+            return recommendDatas.titles.count
+        default:
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell: ShortsCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortsCollectionViewCell.identifier, for: indexPath) as? ShortsCollectionViewCell else { return UICollectionViewCell() }
-        
-        cell.shortsThumbnailImage.image = shortsDatas.userIconList[indexPath.item]
-        cell.nameLabel.text = shortsDatas.userList[indexPath.item]
-        
-        return cell
+        switch collectionView {
+        case shortsCollectionView:
+            guard let cell: ShortsCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortsCollectionViewCell.identifier, for: indexPath) as? ShortsCollectionViewCell else { return UICollectionViewCell() }
+            
+            cell.shortsThumbnailImage.image = shortsDatas.userIconList[indexPath.item]
+            cell.nameLabel.text = shortsDatas.userList[indexPath.item]
+            return cell
+
+        case recommendCollectionView:
+            guard let cell: RecommendCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendCollectionViewCell.identifier, for: indexPath) as? RecommendCollectionViewCell else { return UICollectionViewCell() }
+            
+            cell.tagLabel.text = recommendDatas.titles[indexPath.item]
+            return cell
+            
+        default:
+            return UICollectionViewCell()
+        }
     }
 }
 
 extension HomeTabViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 72, height: 104)
+        switch collectionView {
+        case shortsCollectionView:
+            return CGSize(width: 72, height: 104)
+        case recommendCollectionView:
+            let dummyLabel: UILabel = UILabel()
+            dummyLabel.font = .systemFont(ofSize: 14)
+            dummyLabel.text = recommendDatas.titles[indexPath.item]
+            
+            return CGSize(width: dummyLabel.frame.width, height: 32)
+        default:
+            return CGSize()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == recommendCollectionView {
+            return CGFloat(9)
+        } else {
+            return CGFloat(0)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if collectionView == recommendCollectionView {
+            return UIEdgeInsets(top: 8, left: 13, bottom: 8, right: 13)
+        }
+        return UIEdgeInsets()
     }
 }
 

@@ -38,6 +38,9 @@
 		19B036402729B57E00106E46 /* VideoListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B0363E2729B57E00106E46 /* VideoListTableViewCell.xib */; };
 		19B036442729C10200106E46 /* VideoListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B036432729C10200106E46 /* VideoListData.swift */; };
 		19B036462729C54A00106E46 /* ShortsIconData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B036452729C54A00106E46 /* ShortsIconData.swift */; };
+		19B036492729D24600106E46 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B036472729D24600106E46 /* RecommendCollectionViewCell.swift */; };
+		19B0364A2729D24600106E46 /* RecommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B036482729D24600106E46 /* RecommendCollectionViewCell.xib */; };
+		19B0364C2729D4C500106E46 /* RecommendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0364B2729D4C500106E46 /* RecommendData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		19B0363E2729B57E00106E46 /* VideoListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoListTableViewCell.xib; sourceTree = "<group>"; };
 		19B036432729C10200106E46 /* VideoListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListData.swift; sourceTree = "<group>"; };
 		19B036452729C54A00106E46 /* ShortsIconData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsIconData.swift; sourceTree = "<group>"; };
+		19B036472729D24600106E46 /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
+		19B036482729D24600106E46 /* RecommendCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCollectionViewCell.xib; sourceTree = "<group>"; };
+		19B0364B2729D4C500106E46 /* RecommendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,8 @@
 				19B036392729AE3700106E46 /* ShortsCollectionViewCell.swift */,
 				19B0363D2729B57E00106E46 /* VideoListTableViewCell.swift */,
 				19B036452729C54A00106E46 /* ShortsIconData.swift */,
+				19B036472729D24600106E46 /* RecommendCollectionViewCell.swift */,
+				19B0364B2729D4C500106E46 /* RecommendData.swift */,
 				19B036142729653600106E46 /* storyboard */,
 				197DB82C270AEFC10014A430 /* SignUpViewController.swift */,
 				197DB82E270AEFD20014A430 /* ConfirmViewController.swift */,
@@ -194,6 +202,7 @@
 				19B0361727296E3900106E46 /* Confirm.storyboard */,
 				19B03619272973CC00106E46 /* Tabbar.storyboard */,
 				19B036252729754B00106E46 /* HomeTab.storyboard */,
+				19B036482729D24600106E46 /* RecommendCollectionViewCell.xib */,
 				19B0363E2729B57E00106E46 /* VideoListTableViewCell.xib */,
 				19B0363A2729AE3700106E46 /* ShortsCollectionViewCell.xib */,
 				19B036272729755200106E46 /* ShortTab.storyboard */,
@@ -315,6 +324,7 @@
 				196C6641270ACC2E008A976B /* LaunchScreen.storyboard in Resources */,
 				196C663E270ACC2E008A976B /* Assets.xcassets in Resources */,
 				19B0362A2729755800106E46 /* AddTab.storyboard in Resources */,
+				19B0364A2729D24600106E46 /* RecommendCollectionViewCell.xib in Resources */,
 				19B0363C2729AE3700106E46 /* ShortsCollectionViewCell.xib in Resources */,
 				19B036402729B57E00106E46 /* VideoListTableViewCell.xib in Resources */,
 				19B0361827296E3900106E46 /* Confirm.storyboard in Resources */,
@@ -352,8 +362,10 @@
 				19B036442729C10200106E46 /* VideoListData.swift in Sources */,
 				19B036382729A6CD00106E46 /* TabbarViewController.swift in Sources */,
 				196C6635270ACC2C008A976B /* AppDelegate.swift in Sources */,
+				19B036492729D24600106E46 /* RecommendCollectionViewCell.swift in Sources */,
 				197DB82D270AEFC10014A430 /* SignUpViewController.swift in Sources */,
 				19B036242729752200106E46 /* StorageTabViewController.swift in Sources */,
+				19B0364C2729D4C500106E46 /* RecommendData.swift in Sources */,
 				19B03620272974F400106E46 /* AddTabViewController.swift in Sources */,
 				196C6637270ACC2C008A976B /* SceneDelegate.swift in Sources */,
 				19B0361E272974E700106E46 /* ShortTabViewController.swift in Sources */,

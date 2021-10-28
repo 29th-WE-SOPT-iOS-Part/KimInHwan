@@ -84,7 +84,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Go6-wp-zF4" customClass="ShortsCollectionViewCell" customModule="_9th_iOS_HW" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShortsCollectionViewCell" id="Go6-wp-zF4" customClass="ShortsCollectionViewCell" customModule="_9th_iOS_HW" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="-12" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mIq-LZ-50r">
@@ -95,7 +95,7 @@
                                 </cells>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2NR-ee-cjt">
-                                <rect key="frame" x="0.0" y="192" width="414" height="670"/>
+                                <rect key="frame" x="0.0" y="240" width="414" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VideoListTableViewCell" id="odB-oh-jji" customClass="VideoListTableViewCell" customModule="_9th_iOS_HW" customModuleProvider="target">
@@ -108,24 +108,52 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qFy-M6-KDT">
+                                <rect key="frame" x="0.0" y="192" width="414" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="A87-BT-c53"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="9" id="BeR-21-hRk">
+                                    <size key="itemSize" width="130" height="32"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecommendCollectionViewCell" id="Fga-hU-BWC" customClass="RecommendCollectionViewCell" customModule="_9th_iOS_HW" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-2.5" width="130" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DFe-QM-lTl">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="53"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="130" height="53"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nib-b6-Drs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8FZ-YE-jxa" firstAttribute="leading" secondItem="nib-b6-Drs" secondAttribute="leading" id="0Zo-gg-7Q2"/>
                             <constraint firstItem="8FZ-YE-jxa" firstAttribute="top" secondItem="A33-R4-fbE" secondAttribute="bottom" id="8jH-Lm-l5T"/>
-                            <constraint firstItem="2NR-ee-cjt" firstAttribute="top" secondItem="8FZ-YE-jxa" secondAttribute="bottom" id="AFt-Jq-CM0"/>
+                            <constraint firstItem="nib-b6-Drs" firstAttribute="trailing" secondItem="qFy-M6-KDT" secondAttribute="trailing" id="9Jj-c4-reP"/>
                             <constraint firstItem="nib-b6-Drs" firstAttribute="bottom" secondItem="2NR-ee-cjt" secondAttribute="bottom" id="FcZ-zx-Yc0"/>
                             <constraint firstItem="2NR-ee-cjt" firstAttribute="leading" secondItem="nib-b6-Drs" secondAttribute="leading" id="JoW-S7-iGi"/>
                             <constraint firstItem="nib-b6-Drs" firstAttribute="trailing" secondItem="2NR-ee-cjt" secondAttribute="trailing" id="Lua-uh-Eeg"/>
+                            <constraint firstItem="2NR-ee-cjt" firstAttribute="top" secondItem="qFy-M6-KDT" secondAttribute="bottom" id="R2a-14-cAS"/>
+                            <constraint firstItem="qFy-M6-KDT" firstAttribute="top" secondItem="8FZ-YE-jxa" secondAttribute="bottom" id="RZN-gc-V6t"/>
                             <constraint firstItem="A33-R4-fbE" firstAttribute="top" secondItem="nib-b6-Drs" secondAttribute="top" id="VoD-m8-ItN"/>
                             <constraint firstItem="nib-b6-Drs" firstAttribute="trailing" secondItem="A33-R4-fbE" secondAttribute="trailing" id="eFm-ki-EtI"/>
+                            <constraint firstItem="qFy-M6-KDT" firstAttribute="leading" secondItem="nib-b6-Drs" secondAttribute="leading" id="iDW-oo-Qok"/>
                             <constraint firstItem="A33-R4-fbE" firstAttribute="leading" secondItem="nib-b6-Drs" secondAttribute="leading" id="nIN-Ej-Z7G"/>
                             <constraint firstItem="nib-b6-Drs" firstAttribute="trailing" secondItem="8FZ-YE-jxa" secondAttribute="trailing" id="qjC-gX-qI2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="homeIconFill" selectedImage="homeIcon" id="Hgn-Qj-T3i"/>
                     <connections>
+                        <outlet property="recommendCollectionView" destination="qFy-M6-KDT" id="GXE-79-zfF"/>
                         <outlet property="shortsCollectionView" destination="8FZ-YE-jxa" id="roJ-h2-Rqu"/>
                         <outlet property="videoListTableView" destination="2NR-ee-cjt" id="LtY-Cj-hOI"/>
                     </connections>
