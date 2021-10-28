@@ -103,7 +103,7 @@ extension HomeTabViewController: UICollectionViewDelegateFlowLayout {
         if collectionView == recommendCollectionView {
             return UIEdgeInsets(top: 8, left: 13, bottom: 8, right: 13)
         }
-        return UIEdgeInsets()
+        return UIEdgeInsets(top: 0, left: 4.29, bottom: 0, right: 4.29)
     }
 }
 
