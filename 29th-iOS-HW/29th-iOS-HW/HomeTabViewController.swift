@@ -25,6 +25,7 @@ class HomeTabViewController: UIViewController {
     }
     
     func setShortsCollectionView() {
+//        shortsCollectionView.decelerationRate = .fast
         shortsCollectionView.delegate = self
         shortsCollectionView.dataSource = self
         shortsCollectionView.register(UINib(nibName: "ShortsCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: ShortsCollectionViewCell.identifier)
@@ -91,19 +92,12 @@ extension HomeTabViewController: UICollectionViewDelegateFlowLayout {
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        if collectionView == recommendCollectionView {
-            return CGFloat(9)
-        } else {
-            return CGFloat(0)
-        }
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if collectionView == recommendCollectionView {
             return UIEdgeInsets(top: 8, left: 13, bottom: 8, right: 13)
+        } else {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 4)
         }
-        return UIEdgeInsets(top: 0, left: 4.29, bottom: 0, right: 4.29)
     }
 }
 
