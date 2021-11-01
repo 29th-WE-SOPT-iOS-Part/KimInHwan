@@ -14,9 +14,14 @@ class ConfirmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         setNameLabelText()
+    }
+    
+    @IBAction func touchNextButton(_ sender: UIButton) {
+        let tabbarStoryboard = UIStoryboard(name: "Tabbar", bundle: nil)
+        guard let tabbarViewController = tabbarStoryboard.instantiateViewController(withIdentifier: "TabbarViewController") as? TabbarViewController else { return }
+        tabbarViewController.modalPresentationStyle = .fullScreen
+        present(tabbarViewController, animated: true, completion: nil)
     }
     
     func setNameLabelText() {

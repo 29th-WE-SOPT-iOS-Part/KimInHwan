@@ -16,24 +16,35 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addTargetFields()
+        setPasswordToggleImage()
+    }
+    
     @IBAction func touchRawPasswordPresent(_ sender: UIButton) {
         passwordField.isSecureTextEntry = !passwordField.isSecureTextEntry
         sender.isSelected = !sender.isSelected
     }
     
     @IBAction func touchNextButton(_ sender: UIButton) {
-        guard let confirmVC: ConfirmViewController = self.storyboard?.instantiateViewController(withIdentifier: "confirmViewController") as? ConfirmViewController else { return }
+        let confirmStoryBoard = UIStoryboard(name: "Confirm", bundle: nil)
+        guard let confirmViewController = confirmStoryBoard.instantiateViewController(withIdentifier: "confirmViewController") as? ConfirmViewController else { return }
         
-        confirmVC.nameToSet = nameField.text
+        confirmViewController.nameToSet = nameField.text
         
-        confirmVC.modalPresentationStyle = .fullScreen
-        self.present(confirmVC, animated: true, completion: nil)
+        confirmViewController.modalPresentationStyle = .fullScreen
+        present(confirmViewController, animated: true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addTargetFields()
-        setPasswordToggleImage()
+    @objc func checkFieldForNextButton(_ sender: UITextField) {
+        if nameField.hasText
+            && emailOrPhoneNumberField.hasText
+            && passwordField.hasText {
+            nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
+        }
     }
     
     func addTargetFields() {
@@ -45,15 +56,5 @@ class SignUpViewController: UIViewController {
     func setPasswordToggleImage() {
         rawPasswordPresentToggle.setImage(UIImage(systemName: "checkmark.square"), for: .selected)
         rawPasswordPresentToggle.setImage(UIImage(systemName: "square"), for: .normal)
-    }
-    
-    @objc func checkFieldForNextButton(_ sender: UITextField) {
-        if nameField.hasText
-            && emailOrPhoneNumberField.hasText
-            && passwordField.hasText {
-            nextButton.isEnabled = true
-        } else {
-            nextButton.isEnabled = false
-        }
     }
 }

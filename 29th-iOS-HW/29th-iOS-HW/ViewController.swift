@@ -14,18 +14,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
-    @IBAction func unwindToMain(_ unwindSegue: UIStoryboardSegue) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addTargetFields()
     }
     
-    func addTargetFields() {
-        nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+    @IBAction func touchNextButton(_ sender: Any) {
+        let confirmStoryBoard = UIStoryboard(name: "Confirm", bundle: nil)
+        guard let confirmViewController = confirmStoryBoard.instantiateViewController(withIdentifier: "confirmViewController") as? ConfirmViewController else { return }
+        
+        confirmViewController.nameToSet = nameField.text
+        confirmViewController.modalPresentationStyle = .fullScreen
+        present(confirmViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func touchSignInButton(_ sender: UIButton) {
+        let SignUpStoryboard = UIStoryboard(name: "SignUp", bundle: nil)
+        guard let SignUpViewController = SignUpStoryboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
+        navigationController?.pushViewController(SignUpViewController, animated: true)
+    }
+    @IBAction func unwindToSignIn(_ unwindSegue: UIStoryboardSegue) {
     }
     
     @objc func checkFieldForNextButton(_ sender: UITextField) {
@@ -38,11 +46,9 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: - Navigation
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let confirmVC: ConfirmViewController = segue.destination as? ConfirmViewController else { return }
-        
-        confirmVC.nameToSet = nameField.text
+    func addTargetFields() {
+        nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+        emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+        passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
     }
 }
