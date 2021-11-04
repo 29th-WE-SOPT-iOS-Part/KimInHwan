@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="height" constant="20" id="pXa-kn-VEA"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptProfile" translatesAutoresizingMaskIntoConstraints="NO" id="vQS-bG-uXQ">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptProfile" translatesAutoresizingMaskIntoConstraints="NO" id="vQS-bG-uXQ">
                                         <rect key="frame" x="374" y="10" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="gV3-lK-tWs"/>
@@ -154,6 +154,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="homeIconFill" selectedImage="homeIcon" id="Hgn-Qj-T3i"/>
                     <connections>
+                        <outlet property="profileImage" destination="vQS-bG-uXQ" id="h8Z-1o-1Bn"/>
                         <outlet property="recommendCollectionView" destination="qFy-M6-KDT" id="GXE-79-zfF"/>
                         <outlet property="shortsCollectionView" destination="8FZ-YE-jxa" id="roJ-h2-Rqu"/>
                         <outlet property="videoListTableView" destination="2NR-ee-cjt" id="LtY-Cj-hOI"/>

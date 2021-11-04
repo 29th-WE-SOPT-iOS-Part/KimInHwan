@@ -12,6 +12,7 @@ class HomeTabViewController: UIViewController {
     @IBOutlet weak var shortsCollectionView: UICollectionView!
     @IBOutlet weak var recommendCollectionView: UICollectionView!
     @IBOutlet weak var videoListTableView: UITableView!
+    @IBOutlet weak var profileImage: UIImageView!
     
     let videoDatas: VideoListData = VideoListData()
     let shortsDatas: ShortsIconData = ShortsIconData()
@@ -22,6 +23,7 @@ class HomeTabViewController: UIViewController {
         setShortsCollectionView()
         setRecommendCollectionView()
         setVideoListTableView()
+        setProfileImageGestureRecognizer()
     }
     
     func setShortsCollectionView() {
@@ -40,6 +42,19 @@ class HomeTabViewController: UIViewController {
     func setVideoListTableView() {
         videoListTableView.dataSource = self
         videoListTableView.register(UINib(nibName: "VideoListTableViewCell", bundle: .main), forCellReuseIdentifier: VideoListTableViewCell.identifier)
+    }
+    
+    func setProfileImageGestureRecognizer() {
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(touchUpProfileImage(_:)))
+        profileImage.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func touchUpProfileImage(_ sender: UIImageView) {
+        let SignInStoryBoard: UIStoryboard = UIStoryboard(name: "SignIn", bundle: .main)
+        guard let SignInViewController: SignInViewController = SignInStoryBoard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else { return }
+    
+        SignInViewController.modalPresentationStyle = .fullScreen
+        present(SignInViewController, animated: true, completion: nil)
     }
 }
 
