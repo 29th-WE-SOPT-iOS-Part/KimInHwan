@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1940C93F273C2AD000DDCBC6 /* UserSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1940C93E273C2AD000DDCBC6 /* UserSignViewController.swift */; };
 		196C6635270ACC2C008A976B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6634270ACC2C008A976B /* AppDelegate.swift */; };
 		196C6637270ACC2C008A976B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6636270ACC2C008A976B /* SceneDelegate.swift */; };
 		196C6639270ACC2C008A976B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6638270ACC2C008A976B /* LogInViewController.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		0E4FFBFE321397831D6D3BA5 /* Pods_29th_iOS_HWTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_HWTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1940C93E273C2AD000DDCBC6 /* UserSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignViewController.swift; sourceTree = "<group>"; };
 		196C6631270ACC2C008A976B /* 29th-iOS-HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-iOS-HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		196C6634270ACC2C008A976B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		196C6636270ACC2C008A976B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				197DB82C270AEFC10014A430 /* SignUpViewController.swift */,
 				197DB82E270AEFD20014A430 /* ConfirmViewController.swift */,
 				19B036372729A6CD00106E46 /* TabbarViewController.swift */,
+				1940C93E273C2AD000DDCBC6 /* UserSignViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				19B0361C272974CE00106E46 /* HomeTabViewController.swift in Sources */,
 				19B036222729750400106E46 /* SubscribeTabViewController.swift in Sources */,
 				19B0363B2729AE3700106E46 /* ShortsCollectionViewCell.swift in Sources */,
+				1940C93F273C2AD000DDCBC6 /* UserSignViewController.swift in Sources */,
 				19D3CA93273B971500EB55AF /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

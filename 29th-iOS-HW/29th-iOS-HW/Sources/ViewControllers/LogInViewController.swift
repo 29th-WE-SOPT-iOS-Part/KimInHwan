@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class LogInViewController: UserSignViewController {
 
     //MARK: - IBOutlet
     @IBOutlet weak var nameField: UITextField!
@@ -48,14 +48,6 @@ class LogInViewController: UIViewController {
     func addTargetFields() {
         [nameField, emailOrPhoneNumberField, passwordField].forEach({$0?.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)})
     }
-    
-    func loginResultAlert(title: String, message: String) {
-        let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction: UIAlertAction = UIAlertAction(title: "확인", style: .default)
-        
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
 }
 
 //MARK: - Networking
@@ -65,18 +57,20 @@ extension LogInViewController {
             switch responseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? SignResponseData else { return }
-                if let _ = response.data {
-                    self.loginResultAlert(title: "로그인", message: response.message)
+                if let responseData = response.data {
+                    self.resultAlert(title: "로그인", message: response.message) {
+                        self.presentConfirmViewController(name: responseData.name)
+                    }
                 }
             case .pathErr:
-                self.loginResultAlert(title: "로그인", message: "요청 경로 에러")
+                self.resultAlert(title: "로그인", message: "요청 경로 에러")
             case .serverErr:
-                self.loginResultAlert(title: "로그인", message: "서버 내 오류")
+                self.resultAlert(title: "로그인", message: "서버 내 오류")
             case .networkFail:
-                self.loginResultAlert(title: "로그인", message: "통신에 알 수 없는 문제가 생겼습니다.")
+                self.resultAlert(title: "로그인", message: "통신에 알 수 없는 문제가 생겼습니다.")
             case .requestErr(let loginResponse):
                 guard let response = loginResponse as? SignResponseData else { return }
-                self.loginResultAlert(title: "로그인", message: response.message)
+                self.resultAlert(title: "로그인", message: response.message)
             }
         }
     }
