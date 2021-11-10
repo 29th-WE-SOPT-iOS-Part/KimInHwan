@@ -23,12 +23,6 @@ class LogInViewController: UIViewController {
     
     //MARK: - IBAction
     @IBAction func touchNextButton(_ sender: Any) {
-//        let confirmStoryBoard = UIStoryboard(name: "Confirm", bundle: nil)
-//        guard let confirmViewController = confirmStoryBoard.instantiateViewController(withIdentifier: "confirmViewController") as? ConfirmViewController else { return }
-//
-//        confirmViewController.nameToSet = nameField.text
-//        confirmViewController.modalPresentationStyle = .fullScreen
-//        present(confirmViewController, animated: true, completion: nil)
         requestLogin()
     }
     
@@ -52,9 +46,7 @@ class LogInViewController: UIViewController {
     
     // MARK: - custom function
     func addTargetFields() {
-        nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+        [nameField, emailOrPhoneNumberField, passwordField].forEach({$0?.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)})
     }
     
     func loginResultAlert(title: String, message: String) {
@@ -73,7 +65,7 @@ extension LogInViewController {
             switch responseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? SignResponseData else { return }
-                if let userData = response.data {
+                if let _ = response.data {
                     self.loginResultAlert(title: "로그인", message: response.message)
                 }
             case .pathErr:

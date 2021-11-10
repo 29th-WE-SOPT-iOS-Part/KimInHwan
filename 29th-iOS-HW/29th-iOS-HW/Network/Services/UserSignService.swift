@@ -29,21 +29,7 @@ struct UserSignService {
             "password": password,
         ]
         
-        let dataRequest = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
-        
-        dataRequest.responseData { dataResponse in
-            switch dataResponse.result {
-            case .success(_):
-                guard let statusCode = dataResponse.response?.statusCode else { return }
-                guard let value = dataResponse.value else { return }
-                let networkResult = self.judgeSignStatus(by: statusCode, value)
-                completion(networkResult)
-            case .failure(let err):
-                print(err.localizedDescription)
-                completion(.networkFail)
-            }
-            
-        }
+        dataRequest(requestURL: url, headers: header, requestBody: body, completion: completion)
     }
     
     func logIn(email: String,
@@ -61,7 +47,11 @@ struct UserSignService {
             "password": password
         ]
         
-        let dataRequest = AF.request(url, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header)
+        dataRequest(requestURL: url, headers: header, requestBody: body, completion: completion)
+    }
+    
+    private func dataRequest(requestURL: String, headers: HTTPHeaders, requestBody: Parameters, completion: @escaping (NetworkResult<Any>) -> Void) {
+        let dataRequest = AF.request(requestURL, method: .post, parameters: requestBody, encoding: JSONEncoding.default, headers: headers)
         dataRequest.responseData { dataResponse in
             switch dataResponse.result {
             case .success(_):
@@ -73,16 +63,16 @@ struct UserSignService {
                 print(err.localizedDescription)
                 completion(.networkFail)
             }
-            
         }
     }
+
     
     private func judgeSignStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         switch statusCode {
         case 200:
-            return isValidSignData(data: data)
+            return isValidSignData(data: data, state: .succeed)
         case 400:
-            return isClientErrorData(data: data)
+            return isValidSignData(data: data, state: .err)
         case 404:
             return .pathErr
         case 500:
@@ -92,16 +82,18 @@ struct UserSignService {
         }
     }
     
-    private func isValidSignData(data: Data) -> NetworkResult<Any> {
+    private func isValidSignData(data: Data, state: ValidState) -> NetworkResult<Any> {
         let decoder: JSONDecoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(SignResponseData.self, from: data) else { return .pathErr }
-        return .success(decodedData)
+        switch state {
+        case .succeed: return .success(decodedData)
+        case .err: return .requestErr(decodedData)
+        }
     }
     
-    private func isClientErrorData(data: Data) -> NetworkResult<Any> {
-        let decoder: JSONDecoder = JSONDecoder()
-        guard let decodedData = try? decoder.decode(SignResponseData.self, from: data) else { return .pathErr }
-        return .requestErr(decodedData)
-    }
-    
+}
+
+private enum ValidState {
+    case succeed
+    case err
 }

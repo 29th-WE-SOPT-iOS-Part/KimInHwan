@@ -83,7 +83,7 @@ extension SignUpViewController {
             switch responseData {
             case .success(let signUpResponse):
                 guard let response = signUpResponse as? SignResponseData else { return }
-                if let userData = response.data {
+                if let _ = response.data {
                     self.signUpResultAlert(title: "회원가입", message: response.message, isSucceed: true)
                 }
             case .requestErr(let signUpResponse):
