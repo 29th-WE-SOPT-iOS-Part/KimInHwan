@@ -12,5 +12,6 @@ struct APIConstants {
     static let baseURL: String = "https://asia-northeast3-we-sopt-29.cloudfunctions.net/api"
     
     //MARK: Feature URL
-    static let signInURL: String = baseURL + "/user/logins"
+    static let logInURL: String = baseURL + "/user/login"
+    static let signUpURL: String = baseURL + "/user/signup"
 }

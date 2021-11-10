@@ -7,16 +7,16 @@
 
 import Foundation
 
-// MARK: - LoginResponseData
-struct LoginResponseData: Codable {
+// MARK: - SignResponseData
+struct SignResponseData: Codable {
     let status: Int
     let success: Bool
     let message: String
-    let data: LoginResultData?
+    let data: SignResultData?
 }
 
-// MARK: - LoginResultData
-struct LoginResultData: Codable {
+// MARK: - SignResultData
+struct SignResultData: Codable {
     let id: Int
     let name, email: String
 }
