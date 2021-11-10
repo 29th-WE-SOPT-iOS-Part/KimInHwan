@@ -43,6 +43,7 @@
 		19B0364C2729D4C500106E46 /* RecommendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0364B2729D4C500106E46 /* RecommendData.swift */; };
 		19D3CA91273B966C00EB55AF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3CA90273B966C00EB55AF /* APIConstants.swift */; };
 		19D3CA93273B971500EB55AF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3CA92273B971500EB55AF /* NetworkResult.swift */; };
+		19D3CA98273B9C4E00EB55AF /* LoginResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3CA97273B9C4E00EB55AF /* LoginResponseDataModel.swift */; };
 		26BB71EE148383B61354C89B /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4459CC1B1DBE4505EA92BA83 /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework */; };
 		7A581B62669E147595439263 /* Pods_29th_iOS_HW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4BBA97F14B9D1F61AA9C60 /* Pods_29th_iOS_HW.framework */; };
 		C02797E12BBBC5D0B1C4A894 /* Pods_29th_iOS_HWTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4FFBFE321397831D6D3BA5 /* Pods_29th_iOS_HWTests.framework */; };
@@ -107,6 +108,7 @@
 		19B0364B2729D4C500106E46 /* RecommendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendData.swift; sourceTree = "<group>"; };
 		19D3CA90273B966C00EB55AF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		19D3CA92273B971500EB55AF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		19D3CA97273B9C4E00EB55AF /* LoginResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDataModel.swift; sourceTree = "<group>"; };
 		33186205EE9BCF1EF64F9E76 /* Pods-29th-iOS-HW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-iOS-HW.release.xcconfig"; path = "Target Support Files/Pods-29th-iOS-HW/Pods-29th-iOS-HW.release.xcconfig"; sourceTree = "<group>"; };
 		4459CC1B1DBE4505EA92BA83 /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_HW_29th_iOS_HWUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4BBA97F14B9D1F61AA9C60 /* Pods_29th_iOS_HW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_HW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,13 +183,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		195E94A4273B91B6003E82C0 /* Networking */ = {
+		195E94A4273B91B6003E82C0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				19D3CA90273B966C00EB55AF /* APIConstants.swift */,
-				19D3CA92273B971500EB55AF /* NetworkResult.swift */,
+				19D3CA99273B9CEA00EB55AF /* Services */,
+				19D3CA96273B9BA000EB55AF /* NetworkModels */,
 			);
-			path = Networking;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		196C6628270ACC2C008A976B = {
@@ -215,15 +217,9 @@
 		196C6633270ACC2C008A976B /* week1-HW */ = {
 			isa = PBXGroup;
 			children = (
-				195E94A4273B91B6003E82C0 /* Networking */,
-				196C6634270ACC2C008A976B /* AppDelegate.swift */,
-				196C6636270ACC2C008A976B /* SceneDelegate.swift */,
-				195E94A3273B8CB6003E82C0 /* ViewControllers */,
-				195E94A2273B8C9C003E82C0 /* Models */,
-				195E94A1273B8C48003E82C0 /* Cells */,
-				19B036142729653600106E46 /* Storyboards */,
-				196C663D270ACC2E008A976B /* Assets.xcassets */,
 				196C6642270ACC2E008A976B /* Info.plist */,
+				19D3CA94273B987600EB55AF /* Resources */,
+				19D3CA95273B98DB00EB55AF /* Sources */,
 			);
 			name = "week1-HW";
 			path = "29th-iOS-HW";
@@ -266,6 +262,45 @@
 				19B0362F2729759A00106E46 /* StorageTab.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		19D3CA94273B987600EB55AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19B036142729653600106E46 /* Storyboards */,
+				196C6634270ACC2C008A976B /* AppDelegate.swift */,
+				196C6636270ACC2C008A976B /* SceneDelegate.swift */,
+				196C663D270ACC2E008A976B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		19D3CA95273B98DB00EB55AF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				195E94A4273B91B6003E82C0 /* Network */,
+				195E94A2273B8C9C003E82C0 /* Models */,
+				195E94A1273B8C48003E82C0 /* Cells */,
+				195E94A3273B8CB6003E82C0 /* ViewControllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		19D3CA96273B9BA000EB55AF /* NetworkModels */ = {
+			isa = PBXGroup;
+			children = (
+				19D3CA90273B966C00EB55AF /* APIConstants.swift */,
+				19D3CA97273B9C4E00EB55AF /* LoginResponseDataModel.swift */,
+				19D3CA92273B971500EB55AF /* NetworkResult.swift */,
+			);
+			path = NetworkModels;
+			sourceTree = "<group>";
+		};
+		19D3CA99273B9CEA00EB55AF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		2187771A52D290B3EAFADC3A /* Frameworks */ = {
@@ -543,6 +578,7 @@
 			files = (
 				197DB82F270AEFD20014A430 /* ConfirmViewController.swift in Sources */,
 				19B036462729C54A00106E46 /* ShortsIconData.swift in Sources */,
+				19D3CA98273B9C4E00EB55AF /* LoginResponseDataModel.swift in Sources */,
 				19B0363F2729B57E00106E46 /* VideoListTableViewCell.swift in Sources */,
 				196C6639270ACC2C008A976B /* SignInViewController.swift in Sources */,
 				19B036442729C10200106E46 /* VideoListData.swift in Sources */,
