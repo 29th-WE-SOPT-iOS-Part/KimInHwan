@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign In View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="_9th_iOS_HW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" id="BYZ-38-t0r" customClass="LogInViewController" customModule="_9th_iOS_HW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="touchSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bA-7X-4aW"/>
+                                    <action selector="touchSignInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Us-NU-LoJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vH-5b-RCq">
@@ -53,7 +53,7 @@
                                 </constraints>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
-                                    <action selector="touchNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OQ9-Pu-m6M"/>
+                                    <action selector="touchNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IMB-n2-3zW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xZ-XJ-2YA">
@@ -108,10 +108,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="azP-Vl-TDL"/>
                     <connections>
-                        <outlet property="emailOrPhoneNumberField" destination="MhT-AZ-sNg" id="PNP-Kg-lZx"/>
-                        <outlet property="nameField" destination="Tdh-c1-MQv" id="EjX-EE-Qjw"/>
-                        <outlet property="nextButton" destination="3vH-5b-RCq" id="hnG-Gz-I9e"/>
-                        <outlet property="passwordField" destination="8VG-O2-AfB" id="p3l-Tf-8y8"/>
+                        <outlet property="emailOrPhoneNumberField" destination="MhT-AZ-sNg" id="IHI-DV-UkE"/>
+                        <outlet property="nameField" destination="Tdh-c1-MQv" id="bGP-kc-wFw"/>
+                        <outlet property="nextButton" destination="3vH-5b-RCq" id="9r2-zL-Sqh"/>
+                        <outlet property="passwordField" destination="8VG-O2-AfB" id="BE5-1A-dWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,7 +121,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fnF-Hv-EiR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vyH-zc-2yC" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LogInNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vyH-zc-2yC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jd0-U1-yTg">
@@ -129,7 +129,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CdQ-jw-VSK"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Myy-PN-lsx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFw-MS-fTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

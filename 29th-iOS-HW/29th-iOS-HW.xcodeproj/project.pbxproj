@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		196C6635270ACC2C008A976B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6634270ACC2C008A976B /* AppDelegate.swift */; };
 		196C6637270ACC2C008A976B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6636270ACC2C008A976B /* SceneDelegate.swift */; };
-		196C6639270ACC2C008A976B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6638270ACC2C008A976B /* SignInViewController.swift */; };
-		196C663C270ACC2C008A976B /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196C663A270ACC2C008A976B /* SignIn.storyboard */; };
+		196C6639270ACC2C008A976B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C6638270ACC2C008A976B /* LogInViewController.swift */; };
+		196C663C270ACC2C008A976B /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196C663A270ACC2C008A976B /* LogIn.storyboard */; };
 		196C663E270ACC2E008A976B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 196C663D270ACC2E008A976B /* Assets.xcassets */; };
 		196C6641270ACC2E008A976B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196C663F270ACC2E008A976B /* LaunchScreen.storyboard */; };
 		196C664C270ACC2E008A976B /* week1_HWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C664B270ACC2E008A976B /* week1_HWTests.swift */; };
@@ -72,8 +72,8 @@
 		196C6631270ACC2C008A976B /* 29th-iOS-HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "29th-iOS-HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		196C6634270ACC2C008A976B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		196C6636270ACC2C008A976B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		196C6638270ACC2C008A976B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		196C663B270ACC2C008A976B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SignIn.storyboard; sourceTree = "<group>"; };
+		196C6638270ACC2C008A976B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		196C663B270ACC2C008A976B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LogIn.storyboard; sourceTree = "<group>"; };
 		196C663D270ACC2E008A976B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		196C6640270ACC2E008A976B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		196C6642270ACC2E008A976B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		195E94A3273B8CB6003E82C0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				196C6638270ACC2C008A976B /* SignInViewController.swift */,
+				196C6638270ACC2C008A976B /* LogInViewController.swift */,
 				19B0361B272974CE00106E46 /* HomeTabViewController.swift */,
 				19B0361D272974E700106E46 /* ShortTabViewController.swift */,
 				19B0361F272974F400106E46 /* AddTabViewController.swift */,
@@ -251,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				196C663F270ACC2E008A976B /* LaunchScreen.storyboard */,
-				196C663A270ACC2C008A976B /* SignIn.storyboard */,
+				196C663A270ACC2C008A976B /* LogIn.storyboard */,
 				19B036152729659100106E46 /* SignUp.storyboard */,
 				19B0361727296E3900106E46 /* Confirm.storyboard */,
 				19B03619272973CC00106E46 /* Tabbar.storyboard */,
@@ -450,7 +450,7 @@
 				19B036402729B57E00106E46 /* VideoListTableViewCell.xib in Resources */,
 				19B0361827296E3900106E46 /* Confirm.storyboard in Resources */,
 				19B036302729759A00106E46 /* StorageTab.storyboard in Resources */,
-				196C663C270ACC2C008A976B /* SignIn.storyboard in Resources */,
+				196C663C270ACC2C008A976B /* LogIn.storyboard in Resources */,
 				19B0362E2729759400106E46 /* SubscribeTab.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,7 +584,7 @@
 				19B036462729C54A00106E46 /* ShortsIconData.swift in Sources */,
 				19D3CA98273B9C4E00EB55AF /* SignResponseDataModel.swift in Sources */,
 				19B0363F2729B57E00106E46 /* VideoListTableViewCell.swift in Sources */,
-				196C6639270ACC2C008A976B /* SignInViewController.swift in Sources */,
+				196C6639270ACC2C008A976B /* LogInViewController.swift in Sources */,
 				19B036442729C10200106E46 /* VideoListData.swift in Sources */,
 				19B036382729A6CD00106E46 /* TabbarViewController.swift in Sources */,
 				196C6635270ACC2C008A976B /* AppDelegate.swift in Sources */,
@@ -636,12 +636,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		196C663A270ACC2C008A976B /* SignIn.storyboard */ = {
+		196C663A270ACC2C008A976B /* LogIn.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				196C663B270ACC2C008A976B /* Base */,
 			);
-			name = SignIn.storyboard;
+			name = LogIn.storyboard;
 			sourceTree = "<group>";
 		};
 		196C663F270ACC2E008A976B /* LaunchScreen.storyboard */ = {
@@ -785,7 +785,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "29th-iOS-HW";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = SignIn;
+				INFOPLIST_KEY_UIMainStoryboardFile = Tabbar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -815,7 +815,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "29th-iOS-HW";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = SignIn;
+				INFOPLIST_KEY_UIMainStoryboardFile = Tabbar;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

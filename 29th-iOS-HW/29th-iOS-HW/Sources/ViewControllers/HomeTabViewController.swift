@@ -50,11 +50,11 @@ class HomeTabViewController: UIViewController {
     }
     
     @objc func touchUpProfileImage(_ sender: UIImageView) {
-        let SignInStoryBoard: UIStoryboard = UIStoryboard(name: "SignIn", bundle: .main)
-        guard let SignInViewController: SignInViewController = SignInStoryBoard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else { return }
+        let SignInStoryBoard: UIStoryboard = UIStoryboard(name: "LogIn", bundle: .main)
+        guard let LogInNavigationViewController: UINavigationController = SignInStoryBoard.instantiateViewController(withIdentifier: "LogInNavigationController") as? UINavigationController else { return }
     
-        SignInViewController.modalPresentationStyle = .fullScreen
-        present(SignInViewController, animated: true, completion: nil)
+        LogInNavigationViewController.modalPresentationStyle = .fullScreen
+        present(LogInNavigationViewController, animated: true, completion: nil)
     }
 }
 

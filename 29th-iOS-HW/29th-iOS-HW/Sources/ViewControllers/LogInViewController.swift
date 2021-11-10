@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController {
+class LogInViewController: UIViewController {
 
     //MARK: - IBOutlet
     @IBOutlet weak var nameField: UITextField!
@@ -67,7 +67,7 @@ class SignInViewController: UIViewController {
 }
 
 //MARK: - Networking
-extension SignInViewController {
+extension LogInViewController {
     func requestLogin() {
         UserSignUpService.shared.logIn(email: emailOrPhoneNumberField.text ?? "" , password: passwordField.text ?? "" ) { responseData in
             switch responseData {
