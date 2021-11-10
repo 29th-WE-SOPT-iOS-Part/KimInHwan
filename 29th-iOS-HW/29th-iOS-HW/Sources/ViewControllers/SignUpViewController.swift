@@ -9,22 +9,24 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    //MARK: - IBOutlet
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailOrPhoneNumberField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var rawPasswordPresentToggle: UIButton!
-    
     @IBOutlet weak var nextButton: UIButton!
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addTargetFields()
         setPasswordToggleImage()
     }
     
+    //MARK: - IBAction
     @IBAction func touchRawPasswordPresent(_ sender: UIButton) {
         passwordField.isSecureTextEntry = !passwordField.isSecureTextEntry
-        sender.isSelected = !sender.isSelected
+        sender.isSelected.toggle()
     }
     
     @IBAction func touchNextButton(_ sender: UIButton) {
@@ -41,10 +43,10 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    //MARK: - custom function
     func addTargetFields() {
-        nameField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        emailOrPhoneNumberField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
-        passwordField.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)
+        [nameField, emailOrPhoneNumberField, passwordField].forEach({
+            $0?.addTarget(self, action: #selector(checkFieldForNextButton(_:)), for: .editingChanged)})
     }
     
     func setPasswordToggleImage() {
@@ -56,20 +58,25 @@ class SignUpViewController: UIViewController {
         let alert: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction: UIAlertAction = UIAlertAction(title: "확인", style: .default) { _ in
             if isSucceed {
-                let confirmStoryBoard = UIStoryboard(name: "Confirm", bundle: nil)
-                guard let confirmViewController = confirmStoryBoard.instantiateViewController(withIdentifier: "confirmViewController") as? ConfirmViewController else { return }
-                
-                confirmViewController.nameToSet = self.nameField.text
-                confirmViewController.modalPresentationStyle = .fullScreen
-                self.present(confirmViewController, animated: true)
+                self.presentConfirmViewController()
             }
         }
         
         alert.addAction(okAction)
         present(alert, animated: true)
     }
+    
+    private func presentConfirmViewController() {
+        let confirmStoryBoard = UIStoryboard(name: "Confirm", bundle: nil)
+        guard let confirmViewController = confirmStoryBoard.instantiateViewController(withIdentifier: "confirmViewController") as? ConfirmViewController else { return }
+        
+        confirmViewController.nameToSet = self.nameField.text
+        confirmViewController.modalPresentationStyle = .fullScreen
+        present(confirmViewController, animated: true)
+    }
 }
 
+//MARK: - Network Extension
 extension SignUpViewController {
     func requestSignUp() {
         UserSignService.shared.signUp(email: emailOrPhoneNumberField.text ?? "", password: passwordField.text ?? "", name: nameField.text ?? "") { responseData in
