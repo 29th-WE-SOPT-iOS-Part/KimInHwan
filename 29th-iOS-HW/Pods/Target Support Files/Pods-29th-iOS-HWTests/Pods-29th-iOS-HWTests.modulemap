@@ -1,0 +1,6 @@
+framework module Pods_29th_iOS_HWTests {
+  umbrella header "Pods-29th-iOS-HWTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
