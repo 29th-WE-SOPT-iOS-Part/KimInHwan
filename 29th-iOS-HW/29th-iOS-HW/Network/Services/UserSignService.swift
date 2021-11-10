@@ -9,8 +9,8 @@ import Alamofire
 import UIKit
 
 // 유저의 회원가입 및 로그인 관련 서비스
-struct UserSignUpService {
-    static let shared = UserSignUpService()
+struct UserSignService {
+    static let shared = UserSignService()
     
     func signUp(email: String,
                 password: String,

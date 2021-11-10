@@ -69,7 +69,7 @@ class LogInViewController: UIViewController {
 //MARK: - Networking
 extension LogInViewController {
     func requestLogin() {
-        UserSignUpService.shared.logIn(email: emailOrPhoneNumberField.text ?? "" , password: passwordField.text ?? "" ) { responseData in
+        UserSignService.shared.logIn(email: emailOrPhoneNumberField.text ?? "" , password: passwordField.text ?? "" ) { responseData in
             switch responseData {
             case .success(let loginResponse):
                 guard let response = loginResponse as? SignResponseData else { return }
