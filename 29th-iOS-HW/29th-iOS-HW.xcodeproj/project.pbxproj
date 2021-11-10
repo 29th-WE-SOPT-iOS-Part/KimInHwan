@@ -41,6 +41,8 @@
 		19B036492729D24600106E46 /* RecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B036472729D24600106E46 /* RecommendCollectionViewCell.swift */; };
 		19B0364A2729D24600106E46 /* RecommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19B036482729D24600106E46 /* RecommendCollectionViewCell.xib */; };
 		19B0364C2729D4C500106E46 /* RecommendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B0364B2729D4C500106E46 /* RecommendData.swift */; };
+		19D3CA91273B966C00EB55AF /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3CA90273B966C00EB55AF /* APIConstants.swift */; };
+		19D3CA93273B971500EB55AF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3CA92273B971500EB55AF /* NetworkResult.swift */; };
 		26BB71EE148383B61354C89B /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4459CC1B1DBE4505EA92BA83 /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework */; };
 		7A581B62669E147595439263 /* Pods_29th_iOS_HW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4BBA97F14B9D1F61AA9C60 /* Pods_29th_iOS_HW.framework */; };
 		C02797E12BBBC5D0B1C4A894 /* Pods_29th_iOS_HWTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4FFBFE321397831D6D3BA5 /* Pods_29th_iOS_HWTests.framework */; };
@@ -103,6 +105,8 @@
 		19B036472729D24600106E46 /* RecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		19B036482729D24600106E46 /* RecommendCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCollectionViewCell.xib; sourceTree = "<group>"; };
 		19B0364B2729D4C500106E46 /* RecommendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendData.swift; sourceTree = "<group>"; };
+		19D3CA90273B966C00EB55AF /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		19D3CA92273B971500EB55AF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		33186205EE9BCF1EF64F9E76 /* Pods-29th-iOS-HW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-iOS-HW.release.xcconfig"; path = "Target Support Files/Pods-29th-iOS-HW/Pods-29th-iOS-HW.release.xcconfig"; sourceTree = "<group>"; };
 		4459CC1B1DBE4505EA92BA83 /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_HW_29th_iOS_HWUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4BBA97F14B9D1F61AA9C60 /* Pods_29th_iOS_HW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_HW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +184,8 @@
 		195E94A4273B91B6003E82C0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				19D3CA90273B966C00EB55AF /* APIConstants.swift */,
+				19D3CA92273B971500EB55AF /* NetworkResult.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -282,7 +288,6 @@
 				867929AB5FB0D586A3AE27BE /* Pods-29th-iOS-HWTests.debug.xcconfig */,
 				C8E7093CF19274E4BD5CC811 /* Pods-29th-iOS-HWTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -550,9 +555,11 @@
 				19B03620272974F400106E46 /* AddTabViewController.swift in Sources */,
 				196C6637270ACC2C008A976B /* SceneDelegate.swift in Sources */,
 				19B0361E272974E700106E46 /* ShortTabViewController.swift in Sources */,
+				19D3CA91273B966C00EB55AF /* APIConstants.swift in Sources */,
 				19B0361C272974CE00106E46 /* HomeTabViewController.swift in Sources */,
 				19B036222729750400106E46 /* SubscribeTabViewController.swift in Sources */,
 				19B0363B2729AE3700106E46 /* ShortsCollectionViewCell.swift in Sources */,
+				19D3CA93273B971500EB55AF /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
