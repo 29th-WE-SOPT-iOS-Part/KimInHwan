@@ -58,8 +58,9 @@ extension LogInViewController {
             case .success(let loginResponse):
                 guard let response = loginResponse as? SignResponseData else { return }
                 if let responseData = response.data {
+                    UserDefaults.standard.set(responseData.name, forKey: "logInResponseName")
                     self.resultAlert(title: "로그인", message: response.message) {
-                        self.presentConfirmViewController(name: responseData.name)
+                        self.presentConfirmViewController(name: UserDefaults.standard.string(forKey: "logInResponseName") ?? responseData.name)
                     }
                 }
             case .pathErr:

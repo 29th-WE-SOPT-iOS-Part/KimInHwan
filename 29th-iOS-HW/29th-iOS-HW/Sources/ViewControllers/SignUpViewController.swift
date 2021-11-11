@@ -63,8 +63,9 @@ extension SignUpViewController {
             case .success(let signUpResponse):
                 guard let response = signUpResponse as? SignResponseData else { return }
                 if let responseData = response.data {
+                    UserDefaults.standard.set(responseData.name, forKey: "SignUpResponseName")
                     self.resultAlert(title: "회원가입", message: response.message, completion: {
-                        self.presentConfirmViewController(name: responseData.name)
+                        self.presentConfirmViewController(name: UserDefaults.standard.string(forKey: "SignUpResponseName") ?? responseData.name)
                     })
                 }
             case .requestErr(let signUpResponse):
