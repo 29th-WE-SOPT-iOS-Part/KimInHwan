@@ -4,9 +4,8 @@
 //
 //  Created by 김인환 on 2021/11/10.
 //
-
-import Alamofire
 import UIKit
+import Alamofire
 
 // 유저의 회원가입 및 로그인 관련 서비스
 struct UserSignService {

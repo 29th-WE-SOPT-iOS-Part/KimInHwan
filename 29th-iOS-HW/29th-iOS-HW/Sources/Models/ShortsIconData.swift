@@ -4,8 +4,6 @@
 //
 //  Created by 김인환 on 2021/10/28.
 //
-
-import Foundation
 import UIKit
 
 struct ShortsIconData {
