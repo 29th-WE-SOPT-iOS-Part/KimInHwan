@@ -46,6 +46,8 @@
 		19D3CA93273B971500EB55AF /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3CA92273B971500EB55AF /* NetworkResult.swift */; };
 		19D3CA98273B9C4E00EB55AF /* SignResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3CA97273B9C4E00EB55AF /* SignResponseDataModel.swift */; };
 		19D3CA9D273B9D7800EB55AF /* UserSignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D3CA9C273B9D7800EB55AF /* UserSignService.swift */; };
+		19F2D7A32770E82C0008D1E3 /* VideoPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F2D7A22770E82C0008D1E3 /* VideoPlayViewController.swift */; };
+		19F2D7A52770E83F0008D1E3 /* VideoPlay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F2D7A42770E83E0008D1E3 /* VideoPlay.storyboard */; };
 		26BB71EE148383B61354C89B /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4459CC1B1DBE4505EA92BA83 /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework */; };
 		7A581B62669E147595439263 /* Pods_29th_iOS_HW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4BBA97F14B9D1F61AA9C60 /* Pods_29th_iOS_HW.framework */; };
 		C02797E12BBBC5D0B1C4A894 /* Pods_29th_iOS_HWTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E4FFBFE321397831D6D3BA5 /* Pods_29th_iOS_HWTests.framework */; };
@@ -113,6 +115,8 @@
 		19D3CA92273B971500EB55AF /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		19D3CA97273B9C4E00EB55AF /* SignResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignResponseDataModel.swift; sourceTree = "<group>"; };
 		19D3CA9C273B9D7800EB55AF /* UserSignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignService.swift; sourceTree = "<group>"; };
+		19F2D7A22770E82C0008D1E3 /* VideoPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayViewController.swift; sourceTree = "<group>"; };
+		19F2D7A42770E83E0008D1E3 /* VideoPlay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoPlay.storyboard; sourceTree = "<group>"; };
 		33186205EE9BCF1EF64F9E76 /* Pods-29th-iOS-HW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29th-iOS-HW.release.xcconfig"; path = "Target Support Files/Pods-29th-iOS-HW/Pods-29th-iOS-HW.release.xcconfig"; sourceTree = "<group>"; };
 		4459CC1B1DBE4505EA92BA83 /* Pods_29th_iOS_HW_29th_iOS_HWUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_HW_29th_iOS_HWUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A4BBA97F14B9D1F61AA9C60 /* Pods_29th_iOS_HW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29th_iOS_HW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,7 @@
 		195E94A1273B8C48003E82C0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				19F2D7A22770E82C0008D1E3 /* VideoPlayViewController.swift */,
 				19B036392729AE3700106E46 /* ShortsCollectionViewCell.swift */,
 				19B0363D2729B57E00106E46 /* VideoListTableViewCell.swift */,
 				19B036472729D24600106E46 /* RecommendCollectionViewCell.swift */,
@@ -266,6 +271,7 @@
 				19B036292729755800106E46 /* AddTab.storyboard */,
 				19B0362D2729759400106E46 /* SubscribeTab.storyboard */,
 				19B0362F2729759A00106E46 /* StorageTab.storyboard */,
+				19F2D7A42770E83E0008D1E3 /* VideoPlay.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 			files = (
 				19B0361A272973CC00106E46 /* Tabbar.storyboard in Resources */,
 				19B036282729755200106E46 /* ShortTab.storyboard in Resources */,
+				19F2D7A52770E83F0008D1E3 /* VideoPlay.storyboard in Resources */,
 				19B036162729659100106E46 /* SignUp.storyboard in Resources */,
 				19B036262729754B00106E46 /* HomeTab.storyboard in Resources */,
 				196C6641270ACC2E008A976B /* LaunchScreen.storyboard in Resources */,
@@ -591,6 +598,7 @@
 				19B036442729C10200106E46 /* VideoListData.swift in Sources */,
 				19B036382729A6CD00106E46 /* TabbarViewController.swift in Sources */,
 				196C6635270ACC2C008A976B /* AppDelegate.swift in Sources */,
+				19F2D7A32770E82C0008D1E3 /* VideoPlayViewController.swift in Sources */,
 				19B036492729D24600106E46 /* RecommendCollectionViewCell.swift in Sources */,
 				197DB82D270AEFC10014A430 /* SignUpViewController.swift in Sources */,
 				19B036242729752200106E46 /* StorageTabViewController.swift in Sources */,
