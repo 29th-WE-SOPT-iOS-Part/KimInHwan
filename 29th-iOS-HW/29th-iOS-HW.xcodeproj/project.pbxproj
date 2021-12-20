@@ -158,10 +158,12 @@
 		195E94A1273B8C48003E82C0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				19F2D7A22770E82C0008D1E3 /* VideoPlayViewController.swift */,
 				19B036392729AE3700106E46 /* ShortsCollectionViewCell.swift */,
+				19B0363A2729AE3700106E46 /* ShortsCollectionViewCell.xib */,
 				19B0363D2729B57E00106E46 /* VideoListTableViewCell.swift */,
+				19B0363E2729B57E00106E46 /* VideoListTableViewCell.xib */,
 				19B036472729D24600106E46 /* RecommendCollectionViewCell.swift */,
+				19B036482729D24600106E46 /* RecommendCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -179,6 +181,7 @@
 		195E94A3273B8CB6003E82C0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				19F2D7A22770E82C0008D1E3 /* VideoPlayViewController.swift */,
 				196C6638270ACC2C008A976B /* LogInViewController.swift */,
 				19B0361B272974CE00106E46 /* HomeTabViewController.swift */,
 				19B0361D272974E700106E46 /* ShortTabViewController.swift */,
@@ -264,9 +267,6 @@
 				19B0361727296E3900106E46 /* Confirm.storyboard */,
 				19B03619272973CC00106E46 /* Tabbar.storyboard */,
 				19B036252729754B00106E46 /* HomeTab.storyboard */,
-				19B036482729D24600106E46 /* RecommendCollectionViewCell.xib */,
-				19B0363E2729B57E00106E46 /* VideoListTableViewCell.xib */,
-				19B0363A2729AE3700106E46 /* ShortsCollectionViewCell.xib */,
 				19B036272729755200106E46 /* ShortTab.storyboard */,
 				19B036292729755800106E46 /* AddTab.storyboard */,
 				19B0362D2729759400106E46 /* SubscribeTab.storyboard */,
@@ -809,7 +809,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -839,7 +839,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
