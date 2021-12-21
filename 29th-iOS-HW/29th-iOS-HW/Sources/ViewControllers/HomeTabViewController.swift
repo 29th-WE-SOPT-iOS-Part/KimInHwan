@@ -124,6 +124,7 @@ extension HomeTabViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell: VideoListTableViewCell = tableView.dequeueReusableCell(withIdentifier: VideoListTableViewCell.identifier, for: indexPath) as? VideoListTableViewCell else { return UITableViewCell() }
+        cell.delegate = self
         
         cell.thumbnailImage.image = UIImage(named: "wesoptiOSPart")
         cell.userProfileImage.image = UIImage(named: "wesoptProfile")
@@ -131,5 +132,19 @@ extension HomeTabViewController: UITableViewDataSource {
         cell.metadataLabel.text = "WE SOPT ・조회수 100만회 ・ 3주 전"
         
         return cell
+    }
+}
+
+extension HomeTabViewController: VideoListTableViewCellDelegate {
+    func didTouchThumbnailImage(cell: VideoListTableViewCell) {
+        let storyboard = UIStoryboard(name: "VideoPlay", bundle: .main)
+        guard let nextViewController = storyboard.instantiateViewController(withIdentifier: VideoPlayViewController.identifier) as? VideoPlayViewController else { return }
+        
+        nextViewController.thumbnailImageToSet = cell.thumbnailImage.image
+        nextViewController.metadataTextToSet = cell.metadataLabel.text
+        nextViewController.videoTitleTextToSet = cell.videoTitleLabel.text
+        
+        nextViewController.modalPresentationStyle = .fullScreen
+        present(nextViewController, animated: true)
     }
 }
